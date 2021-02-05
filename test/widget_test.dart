@@ -10,21 +10,20 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:flutterdemo/main.dart';
 
+import 'file:///F:/flutters/flutterdemo/lib/text/Text.dart';
+
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  Text2 text2 = new Text2();
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+  var res =text2.sum(3, 4);
+  print("=====res:$res");
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+  print(text2.getString(name: "hello world"));
+
+
+  text2.test((param){
+    print("res callback ==$param");
   });
+
 }

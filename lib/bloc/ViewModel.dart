@@ -1,5 +1,7 @@
 import 'dart:async';
-class DataBloc{
+
+import 'package:flutterdemo/bloc/bloc_index.dart';
+class DataBloc extends BlocBase{
 
   StreamController<String> _streamController =StreamController<String>();
   ///事件订阅对象
@@ -12,5 +14,10 @@ class DataBloc{
 
   close(){
     _streamController.close();
+  }
+
+  @override
+  void dispose() {
+    close();
   }
 }
