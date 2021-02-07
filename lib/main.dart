@@ -1,7 +1,9 @@
 import 'package:fluintl/fluintl.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterdemo/res/strings.dart';
+import 'package:flutterdemo/ui/qrcode/qrcode_page.dart';
 import 'package:flutterdemo/ui/setting_page.dart';
+import 'package:flutterdemo/ui/user/user_login_page.dart';
 
 import 'bloc/ViewModel.dart';
 import 'common/global.dart';
@@ -56,15 +58,28 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text(
-                  'You have pushed the button this many timesddd  dcx:',
-                ),
                 RaisedButton(
                   onPressed: () {
                     NavigatorUtil.pushPage(context, SettingPage());
                   },
                   child: Text(
                     IntlUtil.getString(context, Ids.confirm),
+                  ),
+                ),
+                RaisedButton(
+                  onPressed: () {
+                    NavigatorUtil.pushPage(context, UserLoginPage());
+                  },
+                  child: Text(
+                    IntlUtil.getString(context, Ids.user_login),
+                  ),
+                ),
+                RaisedButton(
+                  onPressed: () {
+                    NavigatorUtil.pushPage(context, QrcodePage());
+                  },
+                  child: Text(
+                    '扫码',
                   ),
                 ),
                 Text(

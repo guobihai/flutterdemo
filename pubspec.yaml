@@ -52,6 +52,20 @@ dependencies:
   # https://github.com/renefloor/flutter_cached_network_image
   cached_network_image: 2.0.0
   # https://github.com/flutter/plugins/tree/master/packages/url_launcher
+  url_launcher: ^5.7.10
+  # https://github.com/peng8350/flutter_pulltorefresh
+  pull_to_refresh: 1.1.6
+  # device_info
+  #  device_info: ^0.4.0+1
+  # webview_flutter
+  webview_flutter: ^1.0.7
+  # share
+  share: ^0.6.5+4
+  #二维码扫码生成器
+  qr_flutter: ^3.2.0
+  #二维码扫描器
+#  barcode_scanner: ^1.0.1
+  qrscan: ^0.2.22
 
 dev_dependencies:
   flutter_test:
@@ -69,9 +83,23 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/ali_connors.png
+    - assets/images/ali_connors_sml.png
+    - assets/images/qrcode.png
+    - assets/images/icon_wan_android.png
+    - assets/images/ic_launcher_news.png
+    - assets/images/guide1.png
+    - assets/images/guide2.png
+    - assets/images/guide3.png
+    - assets/images/guide4.png
+    - assets/images/splash_bg.png
+
+    - packages/base_library/assets/ic_login_bg.png
+    - packages/base_library/assets/ic_network_error.png
+    - packages/base_library/assets/ic_data_empty.png
+
+    - assets/data/china.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
